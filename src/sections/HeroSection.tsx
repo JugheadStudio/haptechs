@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Box } from "@mui/material";
 import Grid from '@mui/material/Grid2';
 import logo from "../logo.svg";
-import SocialIcons from "./SocialIcons";
+import SocialIcons from "../components/SocialIcons";
 
 const HeroSection = () => {
   return (

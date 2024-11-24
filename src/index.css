@@ -5,11 +5,32 @@
 /* @import '@fontsource/montserrat';
 @import '@fontsource/roboto-mono'; */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
+}
+
+/* ====================== Utils ====================== */
+
+.Section-top-spacing {
+  padding-top: 200px;
+}
+
+.section-heading {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-text-large {
+  font-weight: 600;
+  line-height: 0.9;
+  text-transform: uppercase;
 }
 
 /* ====================== Home ====================== */
@@ -26,4 +47,19 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+/* ====================== Future Section ====================== */
+
+.vr-bg-1 {
+  background-image: url('../public/assets/VR1.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+  .vr-bg-1 {
+    background-size: 100%;
+  }
 }

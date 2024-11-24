@@ -12,6 +12,10 @@ const NavBar = () => {
     setIsOpen(open);
   };
 
+  const handleMenuItemClick = () => {
+    toggleDrawer(false);
+  };
+
   const list = () => (
     <Box
       sx={{
@@ -20,6 +24,10 @@ const NavBar = () => {
         display: "flex",
         flexDirection: "column",
         padding: 2,
+        backgroundColor: "rgba(0, 0, 0, 0.8)",
+        zIndex: 1300,
+        transition: "transform 0.3s ease-in-out",
+        transform: isOpen ? "translateX(0)" : "translateX(-100%)",
       }}
     >
       <IconButton
@@ -39,7 +47,7 @@ const NavBar = () => {
           justifyContent: "center",
         }}
       >
-        {["Home", "Vision", "Mission", "The Future", "HapSphere", "Other Products"].map(
+        {["Home", "Vision", "Mission", "Future", "HapSphere", "Other Products"].map(
           (text) => (
             <ListItem key={text} disablePadding>
               <ListItemButton
@@ -52,6 +60,7 @@ const NavBar = () => {
                 }}
                 component="a"
                 href={`#${text.toLowerCase().replace(/\s+/g, "")}`}
+                onClick={handleMenuItemClick}
               >
                 <ListItemText
                   primary={text}
@@ -76,7 +85,7 @@ const NavBar = () => {
           display: "flex",
           alignItems: "center",
           padding: 4,
-          backgroundColor: "rgba(0, 0, 0, 0.8)", // Slight transparency for better effect
+          backgroundColor: "rgba(0, 0, 0, 0.8)",
           zIndex: 1200,
         }}
       >
@@ -97,7 +106,6 @@ const NavBar = () => {
 
       {isOpen && (
         <Box
-          className="bg-pink"
           sx={{
             position: "fixed",
             top: 0,
