@@ -23,6 +23,7 @@ module.exports = {
         darkGrey: '#1E1E1E'
       },
       fontSize: {
+        '1xl': ['26px', { lineHeight: '1' }],
         '2xl': ['35px', { lineHeight: '0.9' }],
         '3xl': ['48px', { lineHeight: '0.9' }],
         '5xl': ['50px', { lineHeight: '0.9' }],

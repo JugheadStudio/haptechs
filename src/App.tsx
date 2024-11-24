@@ -10,6 +10,8 @@ import HeroSection from "./sections/HeroSection";
 import VisionSection from "./sections/VisionSection";
 import MissionSection from "./sections/MissionSection";
 import FutureSection from "./sections/FutureSection";
+import WhyVrMattersSection from "./sections/WhyVrMattersSection";
+import HapsphereSection from "./sections/HapSphereSection";
 
 const theme = createTheme({
   typography: {
@@ -45,6 +47,10 @@ function App() {
       <MissionSection/>
 
       <FutureSection/>
+
+      <WhyVrMattersSection/>
+
+      <HapsphereSection/>
 
     </ThemeProvider>
   );

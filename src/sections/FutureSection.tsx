@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid2';
 const FutureSection = () => {
   return (
     <Container
-      id="future"
+      id="the-future"
       className="flex flex-col justify-start md:justify-center Section-top-spacing h-screen text-left vr-bg-1"
     >
       <Box>

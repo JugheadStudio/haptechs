@@ -30,12 +30,7 @@ const NavBar = () => {
         transform: isOpen ? "translateX(0)" : "translateX(-100%)",
       }}
     >
-      <IconButton
-        edge="end"
-        color="inherit"
-        onClick={() => toggleDrawer(false)}
-        sx={{ alignSelf: "flex-end", marginBottom: 2 }}
-      >
+      <IconButton edge="end" color="inherit" onClick={() => toggleDrawer(false)} sx={{ alignSelf: "flex-end", marginBottom: 2 }}>
         <CloseIcon sx={{ fontSize: 40, color: "white" }} />
       </IconButton>
 
@@ -47,9 +42,11 @@ const NavBar = () => {
           justifyContent: "center",
         }}
       >
-        {["Home", "Vision", "Mission", "Future", "HapSphere", "Other Products"].map(
-          (text) => (
-            <ListItem key={text} disablePadding>
+        {["Home", "Vision", "Mission", "The Future", "Why VR Matters", "HapSphere", "More Products"].map((text) => {
+          const id = text.toLowerCase().replace(/\s+/g, "-");
+
+          return (
+            <ListItem key={id} disablePadding>
               <ListItemButton
                 sx={{
                   padding: 2,
@@ -59,17 +56,14 @@ const NavBar = () => {
                   },
                 }}
                 component="a"
-                href={`#${text.toLowerCase().replace(/\s+/g, "")}`}
+                href={`#${id}`} // Use the processed ID for href
                 onClick={handleMenuItemClick}
               >
-                <ListItemText
-                  primary={text}
-                  sx={{ textAlign: "center", color: "white" }}
-                />
+                <ListItemText primary={text} sx={{ textAlign: "center", color: "white" }} />
               </ListItemButton>
             </ListItem>
-          )
-        )}
+          );
+        })}
       </List>
     </Box>
   );
@@ -93,13 +87,7 @@ const NavBar = () => {
 
         <div style={{ flexGrow: 1 }} />
 
-        <IconButton
-          edge="end"
-          color="inherit"
-          onClick={() => toggleDrawer(true)}
-          aria-label="menu"
-          sx={{ color: "white" }}
-        >
+        <IconButton edge="end" color="inherit" onClick={() => toggleDrawer(true)} aria-label="menu" sx={{ color: "white" }}>
           <MenuIcon sx={{ fontSize: 40 }} />
         </IconButton>
       </Box>
