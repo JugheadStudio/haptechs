@@ -1,25 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import HeroSection from "./components/HeroSection";
+import NavBar from "./components/NavBar";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
+
+import "./index.css";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: '"Montserrat", sans-serif',
+    // fontFamily: 'Roboto Mono, monospace',
+    h1: {
+      fontFamily: '"Montserrat", sans-serif',
+    },
+    h2: {
+      fontFamily: '"Montserrat", sans-serif',
+    },
+  },
+  palette: {
+    mode: 'dark',
+    background: {
+      default: '#000000',
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div className="App">
+        <header className="App-header">
+          <NavBar />
+          <HeroSection />
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 
