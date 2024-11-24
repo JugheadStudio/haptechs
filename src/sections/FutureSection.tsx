@@ -6,7 +6,7 @@ const FutureSection = () => {
   return (
     <Container
       id="the-future"
-      className="flex flex-col justify-start md:justify-center Section-top-spacing h-screen text-left vr-bg-1"
+      className="flex flex-col justify-start md:justify-center Section-top-spacing h-screen text-left vr-bg-1 snap-start"
     >
       <Box>
         <Grid container spacing={2}>

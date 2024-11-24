@@ -6,7 +6,7 @@ const VisionSection = () => {
   return (
     <Container
       id="vision"
-      className="flex flex-col justify-between Section-top-spacing items-start h-screen text-left"
+      className="flex flex-col justify-between Section-top-spacing items-start h-screen text-left snap-start"
     >
       <div className="flex items-center w-full">
         <h2 className="section-heading text-2xl md:text-5xl text-left">

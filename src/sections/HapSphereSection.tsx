@@ -3,15 +3,22 @@ import { Container, Box } from "@mui/material";
 import Grid from '@mui/material/Grid2';
 import ThreeDModel from "../components/ThreeDModel";
 
-const HapsphereSection = () => {
+interface HapsphereSectionProps {
+  nestedSectionsRef: React.RefObject<(HTMLDivElement | null)[]>; // Prop to accept nested refs
+}
+
+const HapsphereSection: React.FC<HapsphereSectionProps> = ({ nestedSectionsRef }) => {
   return (
 		<>
 			<Container
 				id="hapsphere"
-				className="flex flex-col justify-start Section-top-spacing h-screen text-left"
+				ref={(el) => {
+					if (nestedSectionsRef.current) nestedSectionsRef.current[0] = el;
+				}} 
+				className="flex flex-col justify-start Section-top-spacing h-screen text-left snap-start"
 			>
 
-				<ThreeDModel />
+				{/* <ThreeDModel /> */}
 
 				<Box>
 					<Grid container spacing={2}>
@@ -37,7 +44,10 @@ const HapsphereSection = () => {
 
 			<Container
 				id="hapsphere2"
-				className="flex flex-col justify-start Section-top-spacing h-screen text-left"
+				ref={(el) => {
+					if (nestedSectionsRef.current) nestedSectionsRef.current[1] = el;
+				}} 
+				className="flex flex-col justify-start Section-top-spacing h-screen text-left snap-start"
 			>
 				<Box>
 					<Grid container spacing={2}>
@@ -66,7 +76,10 @@ const HapsphereSection = () => {
 
 			<Container
 				id="hapsphere3"
-				className="flex flex-col justify-start Section-top-spacing h-screen text-left"
+				ref={(el) => {
+					if (nestedSectionsRef.current) nestedSectionsRef.current[2] = el;
+				}} 
+				className="flex flex-col justify-start Section-top-spacing h-screen text-left snap-start"
 			>
 				<Box>
 					<Grid container spacing={2}>
@@ -101,7 +114,10 @@ const HapsphereSection = () => {
 
 			<Container
 				id="hapsphere4"
-				className="flex flex-col justify-start Section-top-spacing h-screen text-left"
+				ref={(el) => {
+					if (nestedSectionsRef.current) nestedSectionsRef.current[3] = el;
+				}} 
+				className="flex flex-col justify-start Section-top-spacing h-screen text-left snap-start"
 			>
 				<Box>
 					<Grid container spacing={2}>
@@ -131,7 +147,10 @@ const HapsphereSection = () => {
 
 			<Container
 				id="hapsphere5"
-				className="flex flex-col justify-start Section-top-spacing h-screen text-left"
+				ref={(el) => {
+					if (nestedSectionsRef.current) nestedSectionsRef.current[4] = el;
+				}} 
+				className="flex flex-col justify-start Section-top-spacing h-screen text-left snap-start"
 			>
 				<Box>
 					<Grid container spacing={2}>

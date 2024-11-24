@@ -93,3 +93,52 @@ body {
   background-repeat: no-repeat;
   /* background-size: 60%; */
 }
+
+.vr-bg-3 {
+  background-image: url('../public/assets/VR3.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 55%;
+}
+
+/* Container that holds all sections */
+.snap-y {
+  scroll-snap-type: y mandatory; /* Enables snap scrolling along the y-axis */
+  height: 100vh; /* Full viewport height */
+  overflow-y: scroll; /* Scroll vertically */
+}
+
+/* Individual sections */
+.snap-start {
+  scroll-snap-align: start; /* Align the section to the top of the viewport */
+  height: 100vh; /* Ensure each section takes up the full screen height */
+}
+
+.fixed {
+  position: fixed;
+  bottom: 20px;  /* Adjust as needed */
+  right: 20px;   /* Adjust as needed */
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #1E1E1E; /* Background color */
+  color: white;
+  font-size: 24px; /* Adjust arrow size */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: #333; /* Darker shade on hover */
+}
+
+button:active {
+  background-color: #444; /* Even darker shade when clicked */
+}

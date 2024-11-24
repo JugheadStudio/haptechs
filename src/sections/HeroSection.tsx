@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <Container
       id="home"
-      className="flex flex-col justify-center items-start md:items-center h-screen text-left md:text-center"
+      className="flex flex-col justify-center items-start md:items-center h-screen text-left md:text-center snap-start"
     >
       <img src={logo} alt="Haptech logo" className="mb-12" />
 
@@ -34,7 +34,7 @@ const HeroSection = () => {
               software to unlock the full potential of VR and AR.
             </p>
 
-            <SocialIcons />
+            <SocialIcons justifyCenter={true}/>
           </Grid>
         </Grid>
       </Box>

@@ -4,10 +4,13 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const SocialIcons = () => {
-  return (
-    <div className="flex gap-5 md:justify-center justify-start">
+interface SocialIconsProps {
+  justifyCenter?: boolean;
+}
 
+const SocialIcons: React.FC<SocialIconsProps> = ({ justifyCenter = true }) => {
+  return (
+    <div className={`flex gap-5 ${justifyCenter ? 'md:justify-center' : ''} justify-start`}>
       <a
         href="https://www.linkedin.com"
         target="_blank"

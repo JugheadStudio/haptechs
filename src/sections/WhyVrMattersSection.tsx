@@ -28,7 +28,7 @@ const WhyVrMattersSection = () => {
   return (
     <Container
       id="why-vr-matters"
-      className="flex flex-col justify-between Section-top-spacing items-start h-screen vr-bg-2 pb-12"
+      className="flex flex-col justify-between Section-top-spacing items-start vr-bg-2 pb-12 snap-start"
     >
       <div className="flex w-full">
         <h2 className="section-heading text-2xl md:text-5xl">
