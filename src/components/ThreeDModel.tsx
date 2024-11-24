@@ -96,14 +96,15 @@ const ThreeDModel: React.FC<ThreeDModelProps> = ({ style }) => {
         ...style,
         width: "200px",
         height: "200px",
+        position: "relative"
       }}
     >
       <canvas
         ref={canvasRef}
         style={{
-          position: isFixed ? "fixed" : "relative",
+          position: "fixed",
           bottom: "0",
-          right:  isFixed ? "-380px" : "0",
+          right:  "-400px",
           width: "100%",
           height: "100%",
           objectFit: "contain",
