@@ -24,7 +24,7 @@ const NavBar = () => {
         display: "flex",
         flexDirection: "column",
         padding: 2,
-        backgroundColor: "rgba(0, 0, 0, 0.8)",
+        backgroundColor: "#F62974",
         zIndex: 1300,
         transition: "transform 0.3s ease-in-out",
         transform: isOpen ? "translateX(0)" : "translateX(-100%)",
@@ -79,7 +79,7 @@ const NavBar = () => {
           display: "flex",
           alignItems: "center",
           padding: 4,
-          backgroundColor: "rgba(0, 0, 0, 0.8)",
+          backgroundColor: "transparent",
           zIndex: 1200,
         }}
       >
