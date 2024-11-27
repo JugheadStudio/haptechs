@@ -15,6 +15,7 @@ import WhyVrMattersSection from "./sections/WhyVrMattersSection";
 import HapsphereSection from "./sections/HapSphereSection";
 import MoreProductsSection from "./sections/MoreProductsSection";
 import FooterSection from "./sections/FooterSection";
+import ContactFormSection from "./sections/ContactFormSection";
 
 const theme = createTheme({
   typography: {
@@ -175,6 +176,10 @@ function App() {
 
         <div ref={(el) => (sectionsRef.current[7] = el)}>
           <FooterSection />
+        </div>
+
+        <div ref={(el) => (sectionsRef.current[8] = el)}>
+          <ContactFormSection />
         </div>
       </div>
 
