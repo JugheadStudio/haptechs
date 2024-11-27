@@ -8,7 +8,7 @@ import Notification from "../components/Notification";
 
 const ContactFormSection = () => {
   return (
-    <Container id="home" className="flex flex-col justify-center items-start h-screen text-left snap-start">
+    <Container id="home" className="flex flex-col justify-center items-start h-screen text-left snap-start contact-section">
       <img src={logo} alt="Haptech logo" className="mb-12" />
       <h2 className="text-1xl font-sans mb-4">Contact Us</h2>
       <Box>
@@ -16,15 +16,6 @@ const ContactFormSection = () => {
           <Grid size={{ xs: 12, md: 6 }}>
             <Notification />
             <ContactForm />
-          </Grid>
-
-          <Grid size={{ xs: 12, md: 6 }} sx={{ display: "flex", justifyContent: "end" }}>
-            <Box
-              className="image-border-container"
-              sx={{
-                display: { xs: "none", md: "block" },
-              }}
-            ></Box>
           </Grid>
         </Grid>
       </Box>

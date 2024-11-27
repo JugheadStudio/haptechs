@@ -6,11 +6,11 @@ const FutureSection = () => {
   return (
     <Container
       id="the-future"
-      className="flex flex-col justify-center Section-top-spacing h-screen text-left snap-start future-section"
+      className="flex flex-col justify-start Section-top-spacing h-screen text-left snap-start future-section"
     >
       <Box>
         <Grid container spacing={2}>
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid size={{ xs: 12, md: 12, lg: 6 }}>
             <h2 className="section-heading text-3xl md:text-6xl text-left text-pink mb-10">
               The Future <br />
               is Virtual
@@ -23,7 +23,7 @@ const FutureSection = () => {
             </p>
           </Grid>
 
-          <Grid size={{ xs: 12, md: 6 }} className="image-border-container block md:hidden w-full h-auto mt-5">
+          <Grid size={{ xs: 12, md: 6, xl: 6 }} className="image-border-container block md:hidden w-full h-auto mt-5 pt-20">
             <img src="/assets/VR1.png" alt="" />
           </Grid>
         </Grid>
