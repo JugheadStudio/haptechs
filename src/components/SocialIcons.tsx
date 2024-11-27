@@ -15,7 +15,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ justifyCenter = true }) => {
         href="https://www.linkedin.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-12 h-12 bg-[#1E1E1E] rounded-md hover:bg-gray-700 transition"
+        className="flex items-center justify-center w-12 h-12 bg-[#1E1E1E] rounded-md hover:bg-pink transition"
       >
         <LinkedInIcon className="text-white text-xl" />
       </a>
@@ -24,7 +24,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ justifyCenter = true }) => {
         href="https://www.instagram.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-12 h-12 bg-[#1E1E1E] rounded-md hover:bg-gray-700 transition"
+        className="flex items-center justify-center w-12 h-12 bg-[#1E1E1E] rounded-md hover:bg-pink transition"
       >
         <InstagramIcon className="text-white text-xl" />
       </a>
@@ -33,7 +33,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ justifyCenter = true }) => {
         href="https://www.x.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-12 h-12 bg-[#1E1E1E] rounded-md hover:bg-gray-700 transition"
+        className="flex items-center justify-center w-12 h-12 bg-[#1E1E1E] rounded-md hover:bg-pink transition"
       >
         <XIcon className="text-white text-xl" />
       </a>
@@ -42,7 +42,7 @@ const SocialIcons: React.FC<SocialIconsProps> = ({ justifyCenter = true }) => {
         href="https://www.youtube.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-12 h-12 bg-[#1E1E1E] rounded-md hover:bg-gray-700 transition"
+        className="flex items-center justify-center w-12 h-12 bg-[#1E1E1E] rounded-md hover:bg-pink transition"
       >
         <YouTubeIcon className="text-white text-xl" />
       </a>
