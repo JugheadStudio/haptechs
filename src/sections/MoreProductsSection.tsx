@@ -42,7 +42,6 @@ const MoreProductsSection = () => {
             <Box
               className="flex flex-col justify-start p-6"
               sx={{
-                backgroundColor: "rgba(26, 26, 26, 0.5)",
                 border: "1px solid #F62974",
                 borderRadius: "10px",
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",

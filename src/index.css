@@ -79,7 +79,7 @@ fieldset {
 
 /* ====================== Future Section ====================== */
 
-.vr-bg-1 {
+.future-section {
   background-image: url('../public/assets/VR1.png');
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -95,17 +95,6 @@ fieldset {
 
 .card-heading {
   text-transform: uppercase;
-}
-
-@media (max-width: 768px) { /* Adjust the breakpoint as needed */
-  .vr-bg-1 {
-    background-size: 100%;
-  }
-
-  .vr-bg-2 {
-    background-size: 220%;
-    background-position: bottom center;
-  }
 }
 
 /* ====================== Hapsphere Section ====================== */
@@ -146,13 +135,41 @@ fieldset {
 }
 
 .image-border-container {
-  border: 1px solid #F62974;
+  /* border-bottom: 5px solid #F62974; */
+  background-color: #171717;
   border-radius: 10px;
   overflow: hidden;
   height: 100%;
-  width: 80%;
-  background-image: url('../public/assets/VR4.png');
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  width: 100%;
+  padding: 50px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .vr-bg-1 {
+    background-size: 100%;
+  }
+
+  .vr-bg-2 {
+    background-image: none;
+  }
+
+  .snap-start {
+    height: inherit;
+  }
+
+  .h-screen {
+    min-height: 100vh;
+  }
+
+  .Section-top-spacing {
+    padding-top: 100px;
+  }
+
+  .future-section {
+    background-image: none;
+  }
+
+  .vr-bg-3 {
+    background-image: none;
+  }
 }

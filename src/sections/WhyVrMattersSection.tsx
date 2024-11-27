@@ -57,7 +57,6 @@ const WhyVrMattersSection = () => {
                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
                 backdropFilter: "blur(8px)",
                 textAlign: "center",
-                height: "100%",
               }}
             >
               <img

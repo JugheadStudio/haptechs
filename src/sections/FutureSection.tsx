@@ -6,7 +6,7 @@ const FutureSection = () => {
   return (
     <Container
       id="the-future"
-      className="flex flex-col justify-start md:justify-center Section-top-spacing h-screen text-left vr-bg-1 snap-start"
+      className="flex flex-col justify-center Section-top-spacing h-screen text-left snap-start future-section"
     >
       <Box>
         <Grid container spacing={2}>
@@ -21,6 +21,10 @@ const FutureSection = () => {
               and beyond. With VR, users dive into entirely new worlds, while AR
               overlays digital information seamlessly onto the real world.
             </p>
+          </Grid>
+
+          <Grid size={{ xs: 12, md: 6 }} className="image-border-container block md:hidden w-full h-auto mt-5">
+            <img src="/assets/VR1.png" alt="" />
           </Grid>
         </Grid>
       </Box>

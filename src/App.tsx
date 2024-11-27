@@ -145,7 +145,7 @@ function App() {
 
       <NavBar />
 
-      <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
+      <div className=" h-screen overflow-y-scroll snap-none sm:snap-y sm:snap-mandatory">
         <div ref={(el) => (sectionsRef.current[0] = el)}>
           <HeroSection />
         </div>
