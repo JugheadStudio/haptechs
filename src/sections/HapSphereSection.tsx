@@ -18,8 +18,6 @@ const HapsphereSection: React.FC<HapsphereSectionProps> = ({ nestedSectionsRef }
 				className="flex flex-col justify-start Section-top-spacing h-screen text-left snap-start"
 			>
 
-				{/* <ThreeDModel /> */}
-
 				<Box>
 					<Grid container spacing={2}>
 						<Grid size={{ xs: 12, md: 6 }}>

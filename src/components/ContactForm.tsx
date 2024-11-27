@@ -3,7 +3,7 @@ import { useForm, Controller } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../store";
 import { addNotification, setLoading } from "../store/notificationSlice";
-import { TextField, Button, Checkbox, FormControlLabel, MenuItem, Select, InputLabel, FormControl, CircularProgress } from "@mui/material";
+import { TextField, Button, Checkbox, FormControlLabel, MenuItem, Select, InputLabel, FormControl, CircularProgress, FormHelperText } from "@mui/material";
 
 type FormInputs = {
   name: string;
@@ -64,9 +64,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form className="w-full max-w-lg mx-auto p-6 rounded-lg shadow-md" onSubmit={handleSubmit(onSubmit)}>
-      <h2 className="text-1xl font-sans mb-4">Contact Us</h2>
-
+    <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
       <Controller
         name="name"
         control={control}
@@ -75,18 +73,19 @@ const ContactForm: React.FC = () => {
           minLength: { value: 2, message: "Name must be at least 2 characters." },
         }}
         render={({ field }) => (
-          <TextField
-            {...field}
-            label="Name"
-            variant="outlined"
-            fullWidth
-            className="!mb-6"
-            error={!!errors.name}
-            helperText={errors.name?.message}
-            onChange={(e) => {
-              field.onChange(e);
-            }}
-          />
+          <FormControl fullWidth error={!!errors.name} className="!mb-4">
+            <TextField {...field} label="Name" variant="outlined" fullWidth error={!!errors.name} />
+            <FormHelperText
+              sx={{
+                visibility: errors.name ? "visible" : "hidden",
+                height: "20px",
+                margin: "0",
+              }}
+              error
+            >
+              {errors.name?.message}
+            </FormHelperText>
+          </FormControl>
         )}
       />
 
@@ -101,56 +100,34 @@ const ContactForm: React.FC = () => {
           },
         }}
         render={({ field }) => (
-          <TextField
-            {...field}
-            className="!mb-6"
-            label="Email"
-            variant="outlined"
-            fullWidth
-            error={!!errors.email}
-            helperText={errors.email?.message}
-            onChange={(e) => {
-              field.onChange(e);
-            }}
-          />
+          <FormControl fullWidth error={!!errors.email} className="!mb-4">
+            <TextField {...field} label="Email" variant="outlined" fullWidth error={!!errors.email} />
+            <FormHelperText
+              sx={{
+                visibility: errors.email ? "visible" : "hidden",
+                height: "20px",
+                margin: "0",
+              }}
+              error
+            >
+              {errors.email?.message}
+            </FormHelperText>
+          </FormControl>
         )}
       />
 
       <Controller
         name="product"
         control={control}
-        rules={{
-          required: "Please select at least one product.",
-        }}
+        rules={{ required: "Please select at least one product." }}
         render={({ field }) => (
-          <FormControl fullWidth error={!!errors.product} className="!mb-6">
-            <InputLabel
-              sx={{
-                backgroundColor: "black",
-                zIndex: 1,
-              }}
-            >
-              Products
-            </InputLabel>
-            <Select
-              {...field}
-              onChange={(e) => field.onChange(e)}
-              sx={{
-                textAlign: "left",
-              }}
-              MenuProps={{
-                PaperProps: {
-                  style: {
-                    maxHeight: 200, // Optional: limit max height of dropdown menu
-                  },
-                },
-              }}
-            >
+          <FormControl fullWidth error={!!errors.product} className="!mb-4">
+            <TextField {...field} select label="Product" variant="outlined" fullWidth defaultValue="" helperText={errors.product ? errors.product.message : "Please select a product"} error={!!errors.product} onChange={(e) => field.onChange(e.target.value)}>
               <MenuItem value="HapSphere">HapSphere</MenuItem>
               <MenuItem value="AR ProLens">AR ProLens</MenuItem>
               <MenuItem value="VirtuPad">VirtuPad</MenuItem>
               <MenuItem value="SenseGlove X">SenseGlove X</MenuItem>
-            </Select>
+            </TextField>
           </FormControl>
         )}
       />
@@ -161,7 +138,21 @@ const ContactForm: React.FC = () => {
         rules={{
           maxLength: { value: 500, message: "Message cannot exceed 500 characters." },
         }}
-        render={({ field }) => <TextField {...field} label="Message" variant="outlined" fullWidth multiline rows={4} error={!!errors.message} helperText={errors.message?.message} onChange={(e) => field.onChange(e)} />}
+        render={({ field }) => (
+          <FormControl fullWidth error={!!errors.message} className="!mb-4">
+            <TextField {...field} label="Message" variant="outlined" fullWidth multiline rows={4} error={!!errors.message} />
+            <FormHelperText
+              sx={{
+                visibility: errors.message ? "visible" : "hidden",
+                height: "20px",
+                margin: "0",
+              }}
+              error
+            >
+              {errors.message?.message}
+            </FormHelperText>
+          </FormControl>
+        )}
       />
 
       <Controller
@@ -170,12 +161,15 @@ const ContactForm: React.FC = () => {
         rules={{
           required: "You must accept the terms and conditions.",
         }}
-        render={({ field }) => <FormControlLabel className="!mb-6" control={<Checkbox {...field} checked={field.value} />} label="I accept the terms and conditions." />}
+        render={({ field }) => <FormControlLabel control={<Checkbox {...field} checked={field.value} />} label="I accept the terms and conditions." />}
       />
-      {errors.terms && <p className="text-red-500 text-sm mb-4">{errors.terms.message}</p>}
 
-      <Button type="submit" variant="contained" color="primary" disabled={loading} className="w-full">
-        {loading ? <CircularProgress size={24} /> : "Submit"}
+      <FormHelperText error={!!errors.terms} className="text-red-500 text-sm mt-2 !mb-3" sx={{ visibility: errors.terms ? "visible" : "hidden", height: "20px", margin: "0" }}>
+        {errors.terms?.message}
+      </FormHelperText>
+
+      <Button type="submit" variant="contained" disabled={loading} className="w-full !bg-pink text-white">
+        {loading ? <CircularProgress size={24} style={{ color: "black" }} /> : "Submit"}
       </Button>
     </form>
   );

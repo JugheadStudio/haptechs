@@ -2,8 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import NavBar from "./components/NavBar";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./index.css";
 
 // Sections
@@ -184,16 +184,10 @@ function App() {
       </div>
 
       <div className="fixed bottom-8 right-8 flex flex-col gap-4">
-        <button
-          onClick={handleScrollUp}
-          className="bg-pink text-white p-2 rounded-full shadow-lg hover:bg-red transition-all"
-        >
+        <button onClick={handleScrollUp} className="bg-pink text-white p-2 rounded-full shadow-lg hover:bg-red transition-all hidden sm:flex">
           <ExpandLessIcon className="text-white !text-4xl" />
         </button>
-        <button
-          onClick={handleScrollDown}
-          className="bg-pink text-white p-2 rounded-full shadow-lg hover:bg-red transition-all"
-        >
+        <button onClick={handleScrollDown} className="bg-pink text-white p-2 rounded-full shadow-lg hover:bg-red transition-all hidden sm:flex">
           <ExpandMoreIcon className="text-white !text-4xl" />
         </button>
       </div>

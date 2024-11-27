@@ -17,6 +17,33 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #F62974;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px !important;
+}
+
+button:hover {
+  background-color: #bb1e58 !important;
+}
+
+button:active {
+  background-color: #F62974;
+}
+
+fieldset {
+  border-radius: 10px !important;
+}
+
 /* ====================== Utils ====================== */
 
 .Section-top-spacing {
@@ -101,44 +128,31 @@ body {
   background-size: 55%;
 }
 
-/* Container that holds all sections */
 .snap-y {
-  scroll-snap-type: y mandatory; /* Enables snap scrolling along the y-axis */
-  height: 100vh; /* Full viewport height */
-  overflow-y: scroll; /* Scroll vertically */
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
-/* Individual sections */
 .snap-start {
-  scroll-snap-align: start; /* Align the section to the top of the viewport */
-  height: 100vh; /* Ensure each section takes up the full screen height */
+  scroll-snap-align: start;
+  height: 100vh;
 }
 
 .fixed {
   position: fixed;
-  bottom: 20px;  /* Adjust as needed */
-  right: 20px;   /* Adjust as needed */
+  bottom: 20px;
+  right: 20px;
 }
 
-button {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: #1E1E1E; /* Background color */
-  color: white;
-  font-size: 24px; /* Adjust arrow size */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 50%;
-}
-
-button:hover {
-  background-color: #333; /* Darker shade on hover */
-}
-
-button:active {
-  background-color: #444; /* Even darker shade when clicked */
+.image-border-container {
+  border: 1px solid #F62974;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  width: 80%;
+  background-image: url('../public/assets/VR4.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
