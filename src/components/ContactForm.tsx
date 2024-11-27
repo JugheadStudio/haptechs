@@ -3,12 +3,12 @@ import { useForm, Controller } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../store";
 import { addNotification, setLoading } from "../store/notificationSlice";
-import { TextField, Button, Checkbox, FormControlLabel, MenuItem, Select, InputLabel, FormControl, CircularProgress, FormHelperText } from "@mui/material";
+import { TextField, Button, Checkbox, FormControlLabel, MenuItem, FormControl, CircularProgress, FormHelperText } from "@mui/material";
 
 type FormInputs = {
   name: string;
   email: string;
-  product: string[];
+  product: string;
   message?: string;
   terms: boolean;
 };
@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
     defaultValues: {
       name: "",
       email: "",
-      product: [],
+      product: "",
       message: "",
       terms: false,
     },
@@ -120,9 +120,19 @@ const ContactForm: React.FC = () => {
         name="product"
         control={control}
         rules={{ required: "Please select at least one product." }}
+        defaultValue=""
         render={({ field }) => (
           <FormControl fullWidth error={!!errors.product} className="!mb-4">
-            <TextField {...field} select label="Product" variant="outlined" fullWidth defaultValue="" helperText={errors.product ? errors.product.message : "Please select a product"} error={!!errors.product} onChange={(e) => field.onChange(e.target.value)}>
+            <TextField
+              {...field}
+              select
+              label="Product"
+              variant="outlined"
+              fullWidth
+              helperText={errors.product ? errors.product.message : "Please select a product"}
+              error={!!errors.product}
+              onChange={(e) => field.onChange(e.target.value)} // Capture the selected value
+            >
               <MenuItem value="HapSphere">HapSphere</MenuItem>
               <MenuItem value="AR ProLens">AR ProLens</MenuItem>
               <MenuItem value="VirtuPad">VirtuPad</MenuItem>

@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Box } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import logo from "../logo.svg";
-import SocialIcons from "../components/SocialIcons";
 import ContactForm from "../components/ContactForm";
 import Notification from "../components/Notification";
 

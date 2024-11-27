@@ -1,10 +1,9 @@
 import React from "react";
 import { Container, Box } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import ThreeDModel from "../components/ThreeDModel";
 
 interface HapsphereSectionProps {
-  nestedSectionsRef: React.RefObject<(HTMLDivElement | null)[]>; // Prop to accept nested refs
+  nestedSectionsRef: React.RefObject<(HTMLDivElement | null)[]>;
 }
 
 const HapsphereSection: React.FC<HapsphereSectionProps> = ({ nestedSectionsRef }) => {
