@@ -7,6 +7,7 @@
 Haptechs is a cutting-edge virtual reality startup committed to redefining immersive experiences. By blending state-of-the-art hardware with intuitive software, they aim to revolutionise industries through innovative VR and AR technologies that empower users to explore, connect, and interact in new ways.
 
 ### [Live Demo](https://haptechs.netlify.app/)
+### [Figma Designs & Case study](https://www.figma.com/design/efNab1cGT7keGhgjZPusq7/HapTechs?node-id=0-1&t=scrMtG9MC6vxUO90-1)
 ### [Live Recording](https://drive.google.com/file/d/1Y81fcWxqCAiPb-d3iTBEDa7OzHopYwUZ/view?usp=sharing)
 
 
