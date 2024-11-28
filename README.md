@@ -34,6 +34,11 @@ git clone https://github.com/JugheadStudio/haptechs.git
 npm i
 ```
 
+3. Run app:
+```
+npm start
+```
+
 
 ## Features
 
